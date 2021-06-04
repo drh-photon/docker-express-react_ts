@@ -1,1 +1,11 @@
 # docker-express-react_ts
+
+#build: 
+# docker build -t docker-express-react_ts .
+#                                         ^^ dont forget the dot
+
+#usage: 
+# docker run -it -p 9001:3000 -v $(pwd):/app docker-express-react_ts
+
+#docker-express-react_ts is the image name
+#uses port 9001 on localhost in browser
