@@ -8,10 +8,11 @@ const func = require('./simple/func');
 
 //Middleware1
 //Static public folder
-app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.static(path.join(__dirname, '/client/public')));
+// app.use(express.static(path.join(__dirname, "/client", "build")));
+app.use(express.static("public"));
 //Routes
-app.get('/', (req: Request, res: Response, next: NextFunction) => res.send("number is: " + func(2, 3)));
+// app.get('/', (req: Request, res: Response, next: NextFunction) => res.send("number is: " + func(2, 3)));
 app.get('/api/customers', (req: Request, res: Response, next: NextFunction) => {
     const customers: Object = [
         { id: 1, first: 'john', last: 'doe' },
