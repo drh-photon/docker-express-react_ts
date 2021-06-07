@@ -7,16 +7,15 @@ export default class Customers extends Component {
     componentDidMount() {
         fetch('/api/customers', function(req, res){console.log(req)})
             .then(res => { 
-                JSON.parse(res);
-                console.log(res)
-                // res.json();
+                return res.json();
                 
             }).catch(function(err){console.log(err)})
-            // .then(customers => this.setState({ customers }, () => {
-            //     console.log(customers)
-            // }
-            // ))
+            .then(data => { 
+                this.setState({customers: data})
+                console.log(data)
+            })
     }
+    
     render() {
         return (<div>
             <h1>Customers</h1>
