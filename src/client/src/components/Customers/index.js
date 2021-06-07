@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './customers.css';
 
 export default class Customers extends Component {
     state = { customers: [] }
@@ -15,7 +15,7 @@ export default class Customers extends Component {
                 console.log(data)
             })
     }
-    
+
     render() {
         return (<div>
             <h1>Customers</h1>

@@ -22,7 +22,7 @@ app.get('/api/customers', (req: Request, res: Response, next: NextFunction) => {
      res.send(customers);
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 app.listen(PORT, () => {
     console.log(`running on port ${PORT}`);
 });
