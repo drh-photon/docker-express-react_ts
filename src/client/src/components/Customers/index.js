@@ -3,21 +3,18 @@ import './customers.css';
 
 export default class Customers extends Component {
     state = { customers: [] }
-
     componentDidMount() {
-        fetch('/api/customers', function(req, res){console.log(req)})
-            .then(res => { 
+        fetch('/api/customers')
+            .then(res => {
                 return res.json();
-                
-            }).catch(function(err){console.log(err)})
-            .then(data => { 
-                this.setState({customers: data})
+            }).catch(function (err) { console.log(err) })
+            .then(data => {
+                this.setState({ customers: data })
                 console.log(data)
             })
     }
 
     render() {
-        console.log(this.state.customers)
         return (<div>
             <h1>Customers</h1>
             <ul>
@@ -25,7 +22,6 @@ export default class Customers extends Component {
                     <li key={customer.id}>{customer.first} {customer.last}</li>
                 )}
             </ul>
-
         </div>);
     }
 }
