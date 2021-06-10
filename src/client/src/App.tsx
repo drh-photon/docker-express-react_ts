@@ -1,18 +1,15 @@
 import React from 'react';
-
-import Customers from './components/Customers'
 import './App.css';
 
-function Header ({ title}: {title: string }){
-  return <h1>{title}</h1>;
-}
+//Components
+import Header from './components/Header'
+import Customers from './components/Customers'
 
 
-
-function App() {
+const App: React.FC = () => {
   return (
     <div>
-      <Header title="Typescript Test Environment"/>
+      <Header title="Typescript Test Environment" />
       <Customers />
     </div>
   );
