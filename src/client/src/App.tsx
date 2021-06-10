@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
+
+import Customers from './components/Customers'
 import './App.css';
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
         </p>
     
       </header>
+      <Customers />
     </div>
   );
 }
