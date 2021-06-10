@@ -28,14 +28,14 @@ export default class Customers extends Component {
     render() {
         console.log(this.state.customers)
         return (<div>
-            <h1>Customers</h1>
+            <h3>Customers</h3>
             {/* <ul>
                 {this.state.customers.map(customer =>
                     <li key={customer.id}>{customer.first} {customer.last}</li>
                 )
                 }
             </ul> */}
-            <h1>Func</h1>
+            <h3>Func</h3>
             <div>{this.state.func}</div>
         </div>);
     }
