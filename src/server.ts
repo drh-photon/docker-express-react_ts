@@ -25,13 +25,13 @@ app.get('/api/customers', (req: Request, res: Response, next: NextFunction) => {
         },
         {
           id: 2,
-          name: 'Darth Vader',
-          email: 'darthvader@starwars.com'
+          name: 'John Doe',
+          email: 'john@doe.com'
         },
         {
           id: 3,
-          name: 'Luke Skywalker',
-          email: 'lukeskywalker@starwars.com'
+          name: 'Jane Doe',
+          email: 'jane@doe.com'
         }
       ];
      res.send(customers);
