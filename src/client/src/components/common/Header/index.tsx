@@ -1,13 +1,14 @@
 import React, { useState }from 'react';
 
 
-
-export default function Header() {
+const Header = () => {
   const [head] = useState<string>("Typescript > React Test Environment")
 
   return (
     <div>
-     {head}
+     <h3>{head}</h3>
     </div>
   )
 }
+
+export default Header;

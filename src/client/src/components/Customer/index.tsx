@@ -1,19 +1,19 @@
 import React, { useState, useEffect }from 'react';
 import axios from 'axios'
 
-interface IUser {
+interface ICustomer {
   id: number;
   name: string;
   email: string;
 }
 
 export default function Customer() {
-  const [users, setUsers] = useState<IUser[]>([])
+  const [customers, setCustomers] = useState<ICustomer[]>([])
 
   useEffect(() => {
-    axios.get<IUser[]>('/api/customers')
+    axios.get<ICustomer[]>('/api/customers')
       .then(({ data }) => {
-        setUsers(data)
+        setCustomers(data)
       })
   }, [])
 
@@ -21,8 +21,8 @@ export default function Customer() {
   return (
     <div>
       <ul>
-        {users.map(user => (
-          <li key={user.id}>{user.name} - {user.email}</li>
+        {customers.map(customer => (
+          <li key={customer.id}>{customer.name} - {customer.email}</li>
         ))}
       </ul>
     </div>
