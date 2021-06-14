@@ -1,4 +1,4 @@
-#Full Stack Typescript / Express - React Testing Environment
+# 1/3 stack Typescript / Express - React Testing Environment
 # docker-express-react_ts image
 #proxies to port 3001 on localhost
 
