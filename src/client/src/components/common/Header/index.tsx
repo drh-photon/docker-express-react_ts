@@ -1,8 +1,13 @@
-import React from 'react';
-import './header.css';
+import React, { useState }from 'react';
 
-const Header = ({ title }: { title: string }) => {
-  return <div className="heading">{ title }</div>;
+
+
+export default function Header() {
+  const [head] = useState<string>("Typescript > React Test Environment")
+
+  return (
+    <div>
+     {head}
+    </div>
+  )
 }
-
-export default Header;

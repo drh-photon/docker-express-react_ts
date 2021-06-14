@@ -18,10 +18,22 @@ app.get('/api/func', (req: Request, res: Response, next: NextFunction) => {
 });
 app.get('/api/customers', (req: Request, res: Response, next: NextFunction) => {
     const customers: Object = [
-        { id: 1, first: 'john', last: 'doe' },
-        { id: 2, first: 'jane', last: 'doe' },
-        { id: 3, first: 'bob', last: 'jones' }
-    ];
+        {
+          id: 1,
+          name: 'Donald Hughes',
+          email: 'donald_h@photon.in'
+        },
+        {
+          id: 2,
+          name: 'Darth Vader',
+          email: 'darthvader@starwars.com'
+        },
+        {
+          id: 3,
+          name: 'Luke Skywalker',
+          email: 'lukeskywalker@starwars.com'
+        }
+      ];
      res.send(customers);
 });
 
